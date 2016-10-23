@@ -23,7 +23,13 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+<style type="text/css">
+    .hotelImages{
+        display: none;
+        height: 300px;
+        width: 500px;
+    }
+</style>
 </head>
 
 <body>
@@ -114,7 +120,30 @@
 
         <!-- Second Featurette -->
         <div class="featurette" id="services"><br><br><br>
-            <img class="featurette-image img-responsive pull-left" src="images/hotel.PNG">
+            <img class="hotelImages img-responsive pull-left" src="images/hotel/Capture.PNG"> 
+            <img class="hotelImages img-responsive pull-left" src="images/hotel/Capture2.PNG">
+            <img class="hotelImages img-responsive pull-left" src="images/hotel/Capture3.PNG">
+            <img class="hotelImages img-responsive pull-left" src="images/hotel/Capture4.PNG">
+            <img class="hotelImages img-responsive pull-left" src="images/hotel/Capture5.PNG">
+            <img class="hotelImages img-responsive pull-left" src="images/hotel/Capture6.PNG">
+            <img class="hotelImages img-responsive pull-left" src="images/hotel/Capture7.PNG">
+            <img class="hotelImages img-responsive pull-left" src="images/hotel/Capture8.PNG">
+            <script>
+                var myIndex = 0;
+                carousel();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("hotelImages");
+                    for (i = 0; i < x.length; i++) {
+                       x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) {myIndex = 1}
+                    x[myIndex-1].style.display = "block";
+                    setTimeout(carousel, 4000); // Change image every 2 seconds
+                }
+            </script>
             <h2 class="featurette-heading">Projects i've done 
             </h2>
             <p class="lead"><h2><b>Hotel Management System</b></h2>
